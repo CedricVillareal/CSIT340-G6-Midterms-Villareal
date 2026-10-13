@@ -18,7 +18,9 @@ function App() {
   }
 
   return (
+
     <div className="flex min-h-screen flex-col bg-[#DDDDDD] text-[#000000]">
+      
       <nav className="flex items-center justify-between border-b border-[#CB2957] bg-[#000000] px-20 py-6 text-[#EEEEEE]">
         <h1 className="text-3xl font-bold">Cloudline</h1>
         <ul className="flex gap-10 text-xl">
@@ -34,7 +36,7 @@ function App() {
           <p className="mt-4 text-3xl text-[#CB2957]">
             Seats: {seats} | Months: {months}
           </p>
-          <p className="mt-2 text-xl">Quote for YOUR NAME</p>
+          <p className="mt-2 text-xl">Quote for Cedric Villareal</p>
         </header>
 
         <div className="flex gap-4">
