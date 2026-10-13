@@ -1,18 +1,30 @@
+import { useState } from "react";
 
+function Waitlist() {
+  const [teams, setTeams] = useState(0);
 
-function Waitlist({ teams = 0, handleJoin, handleClear }) {
+  function handleJoin() {
+    setTeams(teams + 1);
+  }
+
+  function handleClear() {
+    setTeams(0);
+  }
+
   return (
     <div className="mx-20 mt-8 flex items-center justify-between rounded-xl border-2 border-[#000000] bg-[#EEEEEE] p-6">
       <div>
-        <h3 className="text-2xl font-bold">Cloudline Enterprise is coming soon!</h3>
+        <h3 className="text-2xl font-bold">
+          Cloudline Enterprise is coming soon!
+        </h3>
+
         <p className="mt-1 text-xl">
-          {teams} {teams === 1 ? "team has" : "teams have"} joined the waitlist.
+          {teams} teams joined the waitlist.
         </p>
       </div>
 
       <div className="flex gap-4">
         <button
-          type="button"
           className="cursor-pointer rounded-lg bg-[#CB2957] px-8 py-3 text-xl font-bold text-[#EEEEEE]"
           onClick={handleJoin}
         >
@@ -20,7 +32,6 @@ function Waitlist({ teams = 0, handleJoin, handleClear }) {
         </button>
 
         <button
-          type="button"
           className="cursor-pointer rounded-lg border-2 border-[#000000] px-8 py-3 text-xl font-bold"
           onClick={handleClear}
         >
@@ -32,7 +43,3 @@ function Waitlist({ teams = 0, handleJoin, handleClear }) {
 }
 
 export default Waitlist;
-
-      
-
-  
